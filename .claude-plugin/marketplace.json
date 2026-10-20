@@ -1,14 +1,14 @@
 {
   "name": "research-paper-toolkit",
-  "description": "A single-plugin marketplace for the IEEE/ACM Research Paper Toolkit.",
+  "description": "A single-plugin marketplace for the Research Paper Toolkit (IEEE/ACM/Springer/Elsevier/NeurIPS-style).",
   "owner": {
-    "name": "Naveen Nair"
+    "name": "Naveen Babu Narayanan Nair"
   },
   "plugins": [
     {
       "name": "research-paper-toolkit",
       "source": "./",
-      "description": "Staged workflow, citation verification, venue-compliance audit, and independent fresh-eyes + final review for IEEE and ACM paper submissions."
+      "description": "Staged workflow, citation verification, venue-compliance audit, and independent fresh-eyes + final review for IEEE, ACM, Springer, Elsevier, and NeurIPS/ICML/ICLR-style paper submissions."
     }
   ],
   "renames": {
