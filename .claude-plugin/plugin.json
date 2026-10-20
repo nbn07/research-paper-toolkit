@@ -1,6 +1,6 @@
 {
   "name": "research-paper-toolkit",
-  "displayName": "Research Paper Toolkit (IEEE/ACM/Springer/Elsevier/NeurIPS-style)",
+  "displayName": "Research Paper Toolkit(IEEE/ACM/Springer/Elsevier/NeurIPS-style)",
   "version": "0.4.0",
   "description": "A staged toolkit for taking a research paper from venue selection through drafting, citation verification, venue-compliance auditing, independent fresh-eyes review, and submission — for IEEE, ACM, Springer, Elsevier, and NeurIPS/ICML/ICLR-style ML venues.",
   "author": {
@@ -8,6 +8,7 @@
   },
   "homepage": "https://github.com/nbn07/research-paper-toolkit",
   "repository": "https://github.com/nbn07/research-paper-toolkit",
+  "icon": "./icon.png",
   "keywords": [
     "ieee",
     "acm",
