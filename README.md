@@ -1,10 +1,10 @@
-# Research Paper Toolkit (IEEE / ACM)
+# Research Paper Toolkit (IEEE / ACM / Springer / Elsevier / NeurIPS-style)
 
-A Claude Code / Claude Cowork plugin that takes an IEEE or ACM research paper from venue selection through drafting, citation verification, formatting compliance, independent review, and submission — as five skills that hand off to each other at the right stage.
+A Claude Code / Claude Cowork plugin that takes a research paper from venue selection through drafting, citation verification, formatting compliance, independent review, and submission — as five skills that hand off to each other at the right stage.
 
 Built around one rule: **never invent a citation, a result, or a fact about the author's own system.** Every skill here is designed to say "unverified" or "ask the author" rather than fill a gap with something plausible-sounding.
 
-It covers both IEEE and ACM: venue-specific checks (IEEEtran vs. acmart, IEEE's numeric citation style vs. ACM's reference format, IEEE Index Terms vs. ACM CCS concepts, IEEE PDF eXpress vs. ACM TAPS camera-ready checks) are built into the workflow and compliance skills, and the review skills are venue-agnostic.
+It covers IEEE, ACM, Springer, Elsevier, and NeurIPS/ICML/ICLR-style ML venues: venue-specific checks (IEEEtran vs. acmart vs. llncs/sn-jnl vs. elsarticle vs. this year's conference style file; numeric vs. author-year citation styles; IEEE Index Terms vs. ACM CCS concepts vs. Elsevier's CRediT/Highlights vs. the NeurIPS-style paper checklist; IEEE PDF eXpress vs. ACM TAPS camera-ready checks) are built into the workflow and compliance skills, and the review skills are venue-agnostic. Because publisher policies and yearly style files change, `venue-compliance` is built to always quote the current CFP or author guide rather than assume a fixed rule — see that skill for specifics on what's stable background knowledge versus what it always re-checks.
 
 **Not on Claude?** See [Using this without Claude](#using-this-without-claude) below — a plain-prompt version of the same methodology that works with any chatbot.
 
@@ -14,7 +14,7 @@ It covers both IEEE and ACM: venue-specific checks (IEEEtran vs. acmart, IEEE's 
 |---|---|
 | `research-paper-workflow` | The orchestrator. Figures out what stage your paper is at (venue selection, lit review, drafting, review, submission, rebuttal) and routes to the right skill below, or does that stage's work directly. |
 | `citation-verifier` | Checks every entry in your `.bib` file against a real, retrieved source — flags fabricated, mismatched, retracted, or unsupported citations. Never confirms a reference from memory. |
-| `venue-compliance` | Audits your paper against the *actual* target venue's CFP — page limits, template, anonymization for double-blind, required metadata, reference style, AI-disclosure policy — and quotes the rule it's checking against. |
+| `venue-compliance` | Audits your paper against the *actual* target venue's CFP — page limits, template, anonymization for double-blind, required metadata, reference style, AI-disclosure policy — and quotes the rule it's checking against. Covers IEEE, ACM, Springer, Elsevier, and NeurIPS/ICML/ICLR-style conventions. |
 | `fresh-eyes-paper-review` | Runs several independent reviewer personas (skeptical PC member, domain practitioner, methods expert, confused newcomer) who see *only* the final paper, never the drafting conversation, then consolidates their findings into a prioritized fix list. |
 | `final-review` | A fast, single-pass checklist for the last mile: contribution clarity, technical soundness, baseline sufficiency, citation ethics, structure, visuals, language. Complements fresh-eyes rather than duplicating it. |
 
@@ -99,7 +99,7 @@ This covers the same ground — the IEEE/ACM domain checks, the verdict categori
 
 ## Contributing
 
-Issues and PRs welcome — especially real paper drafts (anonymized or synthetic) that expose gaps in the checks, additional venue-specific guidance (magazine-style IEEE venues, ACM SIG-specific templates, etc.), or improvements to the `prompts/` versions for specific other assistants.
+Issues and PRs welcome — especially real paper drafts (anonymized or synthetic) that expose gaps in the checks, additional venue-specific guidance (magazine-style IEEE venues, ACM SIG-specific templates, individual Springer/Elsevier journal quirks, or the ICML/ICLR variants of the NeurIPS-style paper checklist), or improvements to the `prompts/` versions for specific other assistants.
 
 ## License
 
