@@ -17,7 +17,7 @@ Goal: every reference in the paper exists, its metadata is correct, and it suppo
 
 Treat general web search/fetch and DOI resolution as the baseline that always works, regardless of what's connected in a given session:
 
-1. **Web search / fetch** for DOI resolution (doi.org, Crossref), IEEE Xplore, the ACM Digital Library, DBLP, arXiv, and standards bodies (RFCs, 3GPP, ETSI, RDK documentation). This alone is enough to verify most entries.
+1. **Web search / fetch** for DOI resolution (doi.org, Crossref), IEEE Xplore, the ACM Digital Library, SpringerLink, ScienceDirect (Elsevier), OpenReview (for NeurIPS/ICML/ICLR-style venues), DBLP, arXiv, and standards bodies (RFCs, 3GPP, ETSI, RDK documentation). This alone is enough to verify most entries.
 2. **Consensus** (`search`), if connected, for faster peer-reviewed lookup.
 3. **alphaXiv**, if connected, for arXiv preprints and full text.
 
@@ -31,7 +31,7 @@ For each BibTeX key:
 2. **Metadata match:** check title (allowing for capitalization), author list and order, year, venue or journal name, volume, issue and pages, and DOI. Note each mismatch.
 3. **Preprint vs published:** if an arXiv entry has since been published at a venue, recommend citing the published version (and give its metadata).
 4. **Retraction or errata:** flag any notice you find.
-5. **Entry quality:** right entry type (`@inproceedings` vs `@article` vs `@misc`), required fields present, title capitals protected with `{...}` for acronyms (for example `{IEEE}`, `{5G}`, `{RDK}`), consistent venue naming, no duplicate entries under different keys.
+5. **Entry quality:** right entry type (`@inproceedings` vs `@article` vs `@misc`), required fields present, title capitals protected with `{...}` for acronyms (for example `{IEEE}`, `{5G}`, `{RDK}`), consistent venue naming, no duplicate entries under different keys. Match the citation *style* to the venue rather than assuming one convention: IEEE, ACM, and NeurIPS/ICML/ICLR-style venues are typically numeric (`[12]`); Springer and Elsevier papers are often author-year (`Smith et al., 2024`) instead, depending on the specific bib style the venue uses — don't flag author-year citations as wrong just because numeric is more familiar.
 6. **Usage:** cited in the text at least once (flag unused entries) and defined (flag `\cite` keys missing from the `.bib`).
 7. **Claim support (sampled or full, as the user prefers):** read the sentence that cites it and check the abstract or full text. Mark **Supports / Partially / Does not support / Couldn't check**. Look hardest at numeric claims ("reduces latency by 40% [12]").
 8. **Recency and balance (paper-level):** note if the related work is missing important recent work (past 2–3 years) from the target venue. Suggest at most 5 candidates, each verified.
