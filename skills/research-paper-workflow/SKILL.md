@@ -1,9 +1,9 @@
 ---
 name: "research-paper-workflow"
-description: "Use when planning, researching, drafting, reviewing, submitting or revising a research paper for an IEEE or ACM venue, to follow a staged workflow from venue choice to rebuttal. Orchestrates the other skills in this toolkit (citation-verifier, venue-compliance, fresh-eyes-paper-review, final-review) at the right stage. Trigger on requests like 'help me pick a venue for this paper', 'draft Section III', 'is this ready to submit', or 'turn these reviews into a rebuttal' — even if the user doesn't name IEEE or ACM explicitly."
+description: "Use when planning, researching, drafting, reviewing, submitting or revising a research paper for an IEEE, ACM, Springer, Elsevier, or NeurIPS/ICML/ICLR-style venue, to follow a staged workflow from venue choice to rebuttal. Orchestrates the other skills in this toolkit (citation-verifier, venue-compliance, fresh-eyes-paper-review, final-review) at the right stage. Trigger on requests like 'help me pick a venue for this paper', 'draft Section III', 'is this ready to submit', or 'turn these reviews into a rebuttal' — even if the user doesn't name a specific publisher or venue family explicitly."
 ---
 
-# Research Paper Workflow (IEEE / ACM)
+# Research Paper Workflow (IEEE / ACM / Springer / Elsevier / NeurIPS-style)
 
 A staged workflow for taking a paper from idea to submission and revision. Work out which stage the user is in, do that stage well, and suggest the next one. Don't run every stage unprompted.
 
@@ -32,7 +32,7 @@ Before substantial work, check for (and read if present):
 ## Stages
 
 ### 1. Venue selection
-Compare candidate IEEE/ACM venues on scope fit, deadlines, page or word limits, review model (single- or double-blind), acceptance rate, indexing, and turnaround. Search the web for current CFPs; never quote deadlines from memory. Output a ranked shortlist table with sources, and save the chosen venue's guidelines as `cfp.md`.
+Compare candidate venues — IEEE, ACM, Springer, Elsevier, or NeurIPS/ICML/ICLR-style, depending on the field — on scope fit, deadlines, page or word limits, review model (single- or double-blind), acceptance rate, indexing, and turnaround. Search the web for current CFPs; never quote deadlines from memory. Output a ranked shortlist table with sources, and save the chosen venue's guidelines as `cfp.md`.
 
 ### 2. Literature review and gap
 Search with Consensus (peer-reviewed), alphaXiv (arXiv full text) and SciSpace if connected; otherwise use web search for the same purpose. Build a comparison table: work, problem, method, dataset or setting, metrics, limitations. Synthesize the gap the paper fills. Prefer recent work (past 3–5 years) plus seminal papers. Add verified BibTeX entries to `refs.bib` only with the user's OK.
@@ -47,7 +47,7 @@ Plan the sections with a page or word budget against the venue limit. A typical 
 Analyze the user's data with appropriate statistics (effect sizes, confidence intervals, significance tests where they apply). Make figures as vector PDFs sized to the column (IEEE single column about 3.5 in, double about 7.16 in), with fonts of 8pt or larger at final size and readable in grayscale. Don't change or drop data points without saying so.
 
 ### 6. Drafting
-Write in LaTeX with the venue class (IEEEtran or acmart), one section at a time, from the user's notes and results. Use formal academic English, active voice where natural, and no marketing language. Mark any placeholder the user must fill as `\todo{...}`.
+Write in LaTeX with the venue's class (IEEEtran, acmart, llncs/sn-jnl for Springer, elsarticle for Elsevier, or the current year's style file for a NeurIPS/ICML/ICLR-style venue — confirm which one the target CFP actually requires rather than assuming), one section at a time, from the user's notes and results. Use formal academic English, active voice where natural, and no marketing language. Mark any placeholder the user must fill as `\todo{...}`.
 
 ### 7. Citation verification
 Hand off to the **citation-verifier** skill in this toolkit.
