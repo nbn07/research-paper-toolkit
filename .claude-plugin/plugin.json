@@ -1,0 +1,22 @@
+{
+  "name": "research-paper-toolkit",
+  "displayName": "IEEE/ACM Research Paper Toolkit",
+  "version": "0.3.0",
+  "description": "A staged toolkit for taking an IEEE or ACM research paper from venue selection through drafting, citation verification, venue-compliance auditing, independent fresh-eyes review, and submission.",
+  "author": {
+    "name": "Naveen Nair"
+  },
+  "homepage": "https://github.com/nbn07/research-paper-toolkit",
+  "repository": "https://github.com/nbn07/research-paper-toolkit",
+  "keywords": [
+    "ieee",
+    "acm",
+    "academic-writing",
+    "research-paper",
+    "latex",
+    "peer-review",
+    "citation-verification",
+    "claude-skills"
+  ],
+  "license": "MIT"
+}
