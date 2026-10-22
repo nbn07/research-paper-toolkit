@@ -1,4 +1,5 @@
 # Research Paper Toolkit (IEEE / ACM / Springer / Elsevier / NeurIPS-style)
+If you found this project useful, please consider giving it a ⭐ to help others find it!
 
 A Claude Code / Claude Cowork plugin that takes a research paper from venue selection through drafting, citation verification, formatting compliance, independent review, and submission — as five skills that hand off to each other at the right stage.
 
